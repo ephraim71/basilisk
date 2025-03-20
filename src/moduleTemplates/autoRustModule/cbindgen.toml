@@ -1,0 +1,30 @@
+language = "C"
+no_includes = true
+
+header = '''
+#ifndef AUTORUSTMODULE_H
+#define AUTORUSTMODULE_H
+
+#include <stdint.h>
+#include "architecture/utilities/bskLogging.h"
+
+
+typedef struct {
+    BSKLogger *bskLogger;  //!< BSK Logging
+}autoRustModuleConfig;
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+'''
+
+trailer = '''
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+''''
+
+[export]
+include = []

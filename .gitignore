@@ -60,3 +60,4 @@ venv/
 # Python packaging
 *.egg-info
 build/
+src/moduleTemplates/autoRustModule/target
