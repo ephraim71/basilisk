@@ -7,6 +7,7 @@
 
 typedef struct {
     BSKLogger *bskLogger;  //!< BSK Logging
+    double varDouble;
 }autoRustModuleConfig;
 
 #ifdef __cplusplus

@@ -1,3 +1,4 @@
+#![allow(non_snake_case)]
 use std::os::raw::c_void;
 use std::thread;
 use std::time::Duration;
@@ -7,6 +8,7 @@ use std::time::Duration;
 #[repr(C)]
 pub struct autoRustModuleConfig {
     pub bskLogger: *mut c_void,
+    pub varDouble: f64,
 }
 
 #[unsafe(no_mangle)]
@@ -51,4 +53,9 @@ pub extern "C" fn Update_autoRustModule(
         "Rust Update_autoRustModule called with callTime: {} and moduleID: {}",
         callTime, moduleID
     );
+
+    unsafe {
+        let current_value = (*configData).varDouble;
+        println!("Rust Update: Read varDouble value: {}", current_value);
+    }
 }

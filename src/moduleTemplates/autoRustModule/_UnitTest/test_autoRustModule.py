@@ -69,6 +69,7 @@ def autoRustModuleTestFunction(show_plots, param1, param2, accuracy):
     # setup module to be tested
     module = autoRustModule.autoRustModule()
     module.ModelTag = "autoRustModuleTag"
+    module.varDouble = 5
     unitTestSim.AddModelToTask(unitTaskName, module)
 
     # Configure blank module input messages
